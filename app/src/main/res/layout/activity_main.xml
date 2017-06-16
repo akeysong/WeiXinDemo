@@ -5,28 +5,35 @@
     android:layout_height="match_parent"
     tools:context="com.heimilink.hmqrcode.MainActivity">
 
-    <ProgressBar
-        android:id="@+id/web_progress_bar"
-        style="?android:attr/progressBarStyleHorizontal"
+    <EditText
+        android:id="@+id/bg_connect_url"
         android:layout_width="match_parent"
-        android:layout_height="5px" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="与后台交互地址"
+        android:textSize="24sp" />
 
-    <WebView
-        android:id="@+id/login_view"
+    <EditText
+        android:id="@+id/qrcode_content"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/web_progress_bar" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bg_connect_url"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="请输入二维码信息"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/qr_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_view"
+        android:layout_below="@+id/qrcode_content"
         android:text="生成二维码" />
 
     <ImageView
         android:id="@+id/qr_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/qr_btn" />
+        android:layout_below="@+id/qr_btn"
+        android:layout_marginTop="5dp" />
 </RelativeLayout>
